@@ -19,17 +19,89 @@
         </nav>
     </div>
     <div class="form-group row">
-        <label for="uid" class="col-form-label">uid</label>
-        <div class="col-sm-3">
-            <input type="text" class="form-control" id="uid">
-        </div>
-        <div class="col-sm-3">
-            <button type="button" class="btn btn-primary" id="okBtn">确定</button>
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-primary" id="connectBtn">连接</button>
+            <button type="button" class="btn btn-danger" id="disconnectBtn">断开</button>
         </div>
     </div>
     <div class="form-group row">
-        <label for="textArea">响应</label>
-        <textarea class="form-control" id="textArea" rows="3"></textarea>
+        <div class="col-sm-12">
+            <h4>广播形式</h4>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-1">
+            <label for="input1" class="col-form-label">message</label>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="input1">
+        </div>
+        <div class="col-sm-1">
+            <button type="button" class="btn btn-primary" id="send1">发送</button>
+        </div>
+        <div class="col-sm-6">
+            <textarea class="form-control" id="ta1" rows="6"></textarea>
+        </div>
+    </div>
+    <hr/>
+    <div class="form-group row">
+        <div class="col-sm-12">
+            <h4>订阅形式</h4>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-1">
+            <label for="input2" class="col-form-label">message</label>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="input2">
+        </div>
+        <div class="col-sm-1">
+            <button type="button" class="btn btn-primary" id="send2">发送</button>
+        </div>
+        <div class="col-sm-6">
+            <textarea class="form-control" id="ta2" rows="6"></textarea>
+        </div>
+    </div>
+    <hr/>
+    <div class="form-group row">
+        <div class="col-sm-12">
+            <h4>角色形式</h4>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-1">
+            <label for="input3" class="col-form-label">message</label>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="input3">
+        </div>
+        <div class="col-sm-1">
+            <button type="button" class="btn btn-primary" id="send3">发送</button>
+        </div>
+        <div class="col-sm-6">
+            <textarea class="form-control" id="ta3" rows="6"></textarea>
+        </div>
+    </div>
+    <hr/>
+    <div class="form-group row">
+        <div class="col-sm-12">
+            <h4>无APP</h4>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-1">
+            <label for="input4" class="col-form-label">message</label>
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="input4">
+        </div>
+        <div class="col-sm-1">
+            <button type="button" class="btn btn-primary" id="send4">发送</button>
+        </div>
+        <div class="col-sm-6">
+            <textarea class="form-control" id="ta6" rows="6"></textarea>
+        </div>
     </div>
 </div>
 </body>
