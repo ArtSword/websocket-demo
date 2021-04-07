@@ -63,24 +63,24 @@ $(document).ready(() => {
     function connectCallback(frame) {
         console.log(frame);
         // 订阅广播
-        this.stompClient.subscribe("/topic/broadcast", function (res) {
+        stompClient.subscribe("/topic/broadcast", function (res) {
             console.log(res);
-            textAreaAppend(ta1, res);
+            textAreaAppend(ta1, res.body);
         });
         //订阅，一般只有订阅的时候在返回
         stompClient.subscribe("/app/subscribe/1", function (res) {
             console.log(res);
-            textAreaAppend(ta2, res);
+            textAreaAppend(ta2, res.body);
         });
         //用户模式
         stompClient.subscribe("/user/queue/one", function (res) {
             console.log(res);
-            textAreaAppend(ta3, res);
+            textAreaAppend(ta3, res.body);
         });
         //无APP
         stompClient.subscribe("/topic/app", function (res) {
             console.log(res);
-            textAreaAppend(ta4, res);
+            textAreaAppend(ta4, res.body);
         });
     }
 
@@ -89,8 +89,8 @@ $(document).ready(() => {
     }
 
     function textAreaAppend(e, data) {
-        e.append(data.data).append("\n");
-        e.scrollTop(textArea[0].scrollHeight);
+        e.append(data).append("\n");
+        e.scrollTop(e[0].scrollHeight);
     }
 
 });

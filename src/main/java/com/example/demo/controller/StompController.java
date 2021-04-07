@@ -1,17 +1,14 @@
 package com.example.demo.controller;
 
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.StrUtil;
-import cn.hutool.json.JSON;
+import cn.hutool.json.JSONObject;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.security.Principal;
 
 @Slf4j
 @RestController
@@ -26,8 +23,10 @@ public class StompController {
      */
     @MessageMapping("/broadcast")
     @SendTo("/topic/broadcast")
-    public String stompHandle(JSON requestBody) {
-        return StrUtil.format("server:{}", requestBody);
+    public String stompHandle(JSONObject requestBody) {
+        requestBody.putIfAbsent("serverTime",DateUtil.now());
+        log.info(requestBody.toStringPretty());
+        return StrUtil.format("server:{}", requestBody.toString());
     }
 
     /**
@@ -35,6 +34,7 @@ public class StompController {
      */
     @SubscribeMapping("/subscribe/{id}")
     public String subscribe(@DestinationVariable Long id) {
+        log.info("subscribe.id:{}", id);
         return "success";
     }
 

@@ -100,7 +100,7 @@
             <button type="button" class="btn btn-primary" id="send4">发送</button>
         </div>
         <div class="col-sm-6">
-            <textarea class="form-control" id="ta6" rows="6"></textarea>
+            <textarea class="form-control" id="ta4" rows="6"></textarea>
         </div>
     </div>
 </div>
