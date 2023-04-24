@@ -19,7 +19,7 @@ $(document).ready(() => {
     let btnSend4 = $("#send4");
     let ta4 = $("#ta4");
 
-    let path = "http://" + window.location.host + "/stomp/websocketJS";
+    let path = "https://" + window.location.host + "/stomp/websocketJS";
 
     let stompClient;
 
