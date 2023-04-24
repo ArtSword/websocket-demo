@@ -7,7 +7,7 @@ $(document).ready(() => {
     let sendBtn = $("#sendBtn");
     let textArea = $("#textArea");
 
-    let path = "ws://" + window.location.host + "/ws/";
+    let path = "wss://" + window.location.host + "/ws/";
 
     connectBtn.click(function () {
         let uid = uidInput.val().trim();
